@@ -5,26 +5,26 @@
 
 #include<stdio.h>
 
-int const STARTINGPOINT = 1000;
+int STARTINGPOINT = 1000;
+int COUNTER = 0;
 
 int main(int argc, char* argv[])
 {
-	int i = 0;
-	int COUNTER = 0;
+
 	while(STARTINGPOINT != 1)
 	{
-		COUNTER = COUNTER + 1;
-		if(STARTINGPOINT %% 2 == 1)
+
+		if(STARTINGPOINT % 2 == 1)
 		{
-			STARTINGPOINT * 3 + 1;
-		}
-		else if(STARTINGPOINT %% == 0)
-		{
-			STARTINGPOINT / 2;
+			STARTINGPOINT = STARTINGPOINT * 3 + 1;
 		}
 		else
 		{
-			printf(COUNTER);
+			STARTINGPOINT = STARTINGPOINT / 2;
 		}
+		COUNTER++;
 	}
+
+	printf("%d",COUNTER);
+	return 0;
 }
